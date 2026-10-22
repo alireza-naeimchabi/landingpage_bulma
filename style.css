@@ -15,9 +15,12 @@
 
 .bild-mit-badge .badge {
     position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
+    top: 0.5rem;
+    right: 0.5rem;
     z-index: 1;
+    /* Schild wächst und schrumpft mit der Bildschirmbreite:
+       mindestens 0.75rem, normal 2.5 % der Breite, höchstens 1.25rem */
+    font-size: clamp(0.75rem, 2.5vw, 1.25rem);
 }
 
 /* 3. Die Navbar ist fest oben. Ohne das würden Überschriften beim Klick
