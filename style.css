@@ -1,0 +1,27 @@
+/* Eigenes CSS nur für Dinge, die Bulma nicht kann. Wird NACH Bulma eingebunden. */
+
+/* 1. Unsere Hauptfarbe als Bulma-Farbe "primary" (Bulma kennt unsere Markenfarbe nicht) */
+:root {
+    --bulma-primary-h: 14deg;
+    --bulma-primary-s: 90%;
+    --bulma-primary-l: 50%;
+}
+
+/* 2. Das "-99 %"-Schild liegt ÜBER dem Bild, oben rechts auf dem Nachher-Foto.
+      Bulma hat keine Klasse, um ein Element über ein anderes zu legen. */
+.bild-mit-badge {
+    position: relative;
+}
+
+.bild-mit-badge .badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 1;
+}
+
+/* 3. Die Navbar ist fest oben. Ohne das würden Überschriften beim Klick
+      auf einen Menü-Link (#preise usw.) unter der Navbar verschwinden. */
+html {
+    scroll-padding-top: 4rem;
+}
